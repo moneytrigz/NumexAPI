@@ -1,0 +1,23 @@
+Public Api
+Numex Exchange Pro provides HTTP APIs for interacting with the exchange public market data.
+- Ticker
+- Chart Data
+- Volume
+
+The HTTP API allows read access to public market data through the public endpoint -
+- Public HTTP Endpoint: http://example.com/api/public
+
+Ticker
+Retrieves summary information for each currency/coin pair listed on the exchange.
+- Ticker Endpoint: http://example.com/api/public?command=returnTicker
+
+- Public HTTP Endpoint:
+http://example.com/api/public?command=returnTicker&coinPair=DOGE_BTCChart Data
+Returns candlestick chart data. Required GET parameters are "coinPair", "interval"
+(candlestick interval in minutes; valid values are 5 = 5min, 15 = 15min, 30 = 30min, 120
+= 2hr, 240 = 4hr, 1440 = 1 day). Fields include:
+
+
+- Ticker Endpoint:
+http://example.com/api/public?command=returnChartData&coinPair=DOGE_BTC&inter
+val=1440
